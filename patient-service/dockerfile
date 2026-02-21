@@ -1,0 +1,14 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy entire service  into wroking directory
+COPY . .
+
+# If no dependencies, skip npm install
+# no dependencies exist, manually installing express globally once to avoid redundant installations across services:
+RUN npm install express 
+
+EXPOSE 3000
+
+CMD ["node", "src/index.js"]
