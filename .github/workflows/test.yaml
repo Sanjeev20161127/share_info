@@ -14,4 +14,5 @@ jobs:
       - name: Test step 1
         run: echo "This is test step 1"
       - name: Test step 2
+        run: echo "This is test step 2"
         
